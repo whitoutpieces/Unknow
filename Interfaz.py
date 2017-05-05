@@ -107,13 +107,13 @@ class trabajo:
                     susua='sa'
                     spassword='1234'
                     print( 'Driver={SQL Server};' \
-                          'Server=LAPTOP-M7FQT57H;' \
+                          'Server=localhost;' \
                           'Database=Detenidosp;uid=' + str(usua) + \
                           ';pwd=' + str(password))
                     try:
                         # creating connection Object which will contain SQL Server Connection
                         connection = pypyodbc.connect('Driver={SQL Server};'
-                                                      'Server=LAPTOP-M7FQT57H;'
+                                                      'Server=localhost;'
                                                       'Database=Detenidosp'
                                                       ';uid=' + str(susua) +
                                                       ';pwd=' + str(spassword))
