@@ -4,7 +4,9 @@ from tkinter import *
 from pypyodbc import *
 from tkinter import  messagebox
 #import tkMessageBox
-
+###########################  se usa para obtener el nombre de la computadora el localhost
+import socket
+hostlocal=socket.gethostname()
 from venDelito import *
 from Creatabla import *
 from Permisos import *
@@ -113,7 +115,7 @@ class trabajo:
                     try:
                         # creating connection Object which will contain SQL Server Connection
                         connection = pypyodbc.connect('Driver={SQL Server};'
-                                                      'Server=localhost;'
+                                                      'Server='+hostlocal+';'
                                                       'Database=Detenidosp'
                                                       ';uid=' + str(susua) +
                                                       ';pwd=' + str(spassword))
